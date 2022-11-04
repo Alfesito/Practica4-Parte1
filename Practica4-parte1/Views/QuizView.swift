@@ -8,13 +8,69 @@
 import SwiftUI
 
 struct QuizView: View {
+    
+    var quizItem : QuizItem
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            HStack{
+                AsyncImage(url: quizItem.attachment?.url){ phase in // 1
+                    if let image = phase.image { // 2
+                        // if the image is valid
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                    } else if phase.error != nil { // 3
+                        // some kind of error appears
+                        Text("No image available")
+                    } else {
+                        //appears as placeholder image
+                        Image(systemName: "photo") // 4
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                    }
+                }.frame(width: 100, height: 60, alignment: .center)
+                    .scaledToFit()
+                VStack{
+                    HStack{
+                        //Boton de favoritos
+                        Image(quizItem.favourite ? "star_yellow" : "star_grey")
+                            .resizable()
+                            .frame(width: 25, height: 25)
+                            .scaledToFit()
+                        //Imagen y nombre del autor
+                        AsyncImage(url: quizItem.author?.photo?.url){ phase in // 1
+                            if let image = phase.image { // 2
+                                // if the image is valid
+                                image
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                            } else if phase.error != nil { // 3
+                                // some kind of error appears
+                                Text("No image available")
+                            } else {
+                                //appears as placeholder image
+                                Image(systemName: "photo") // 4
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                            }
+                        }.frame(width: 15, height: 15)
+                        Text(quizItem.author?.username ?? "Someone")
+                            .font(.system(size: 12, weight: .light))
+                    }
+                    
+                    HStack{
+                        //Pregunta
+                        Text(quizItem.question)
+                            .font(.system(size: 20, weight: .bold))
+                    }
+                }
+            }
+        }
     }
 }
 
-struct QuizView_Previews: PreviewProvider {
+/*struct QuizView_Previews: PreviewProvider {
     static var previews: some View {
         QuizView()
     }
-}
+}*/

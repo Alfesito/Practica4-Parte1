@@ -8,19 +8,24 @@
 import SwiftUI
 
 struct QuizzesListView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+    
+    @EnvironmentObject var quizzesModel : QuizzesModel
+    
+    var body: some View{
+        VStack{
+            Text("Quizzes")
+            List{
+                ForEach(quizzesModel.quizzes){ qi in
+                    QuizView(quizItem: qi)
+                }
+            }
+            .onAppear{quizzesModel.load()}
         }
-        .padding()
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+/*struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         QuizzesListView()
     }
-}
+}*/

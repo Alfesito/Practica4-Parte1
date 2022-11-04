@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct Practica4_parte1App: App {
+    
+    let quizzesModel = QuizzesModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            QuizzesListView()
+                .environmentObject(quizzesModel)
         }
     }
 }
