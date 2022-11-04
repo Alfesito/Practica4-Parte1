@@ -13,6 +13,11 @@ struct AnswerView: View {
 
     var body: some View {
         Text(quizItem.question)
+        //TextField
+        
+        //Si la respuesta es correcta, se debe de mostrar una alerta si la pregunta es correcta o incorrecta
+        
+        //Contador de quizzes, utilizando un array con los ids de los quizzes acertados
     }
 }
 
