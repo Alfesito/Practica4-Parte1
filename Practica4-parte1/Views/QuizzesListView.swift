@@ -12,14 +12,19 @@ struct QuizzesListView: View {
     @EnvironmentObject var quizzesModel : QuizzesModel
     
     var body: some View{
-        VStack{
-            Text("Quizzes")
-            List{
-                ForEach(quizzesModel.quizzes){ qi in
-                    QuizView(quizItem: qi)
+        NavigationView{
+            VStack{
+                List{
+                    ForEach(quizzesModel.quizzes){ qi in
+                        NavigationLink(
+                            destination: AnswerView(quizItem: qi)){
+                                QuizView(quizItem: qi)
+                            }
+                    }
                 }
+                .navigationBarTitle(Text("Quizzes Game"))
+                .onAppear{quizzesModel.load()}
             }
-            .onAppear{quizzesModel.load()}
         }
     }
 }

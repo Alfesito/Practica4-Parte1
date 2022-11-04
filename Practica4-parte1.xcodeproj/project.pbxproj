@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15ACA3CB2915130E00C12AB4 /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ACA3CA2915130E00C12AB4 /* AnswerView.swift */; };
 		15C857522913920B009CAA50 /* Practica4_parte1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C857512913920B009CAA50 /* Practica4_parte1App.swift */; };
 		15C857542913920B009CAA50 /* QuizzesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C857532913920B009CAA50 /* QuizzesListView.swift */; };
 		15C857562913920C009CAA50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15C857552913920C009CAA50 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15ACA3CA2915130E00C12AB4 /* AnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
 		15C8574E2913920B009CAA50 /* Practica4-parte1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Practica4-parte1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C857512913920B009CAA50 /* Practica4_parte1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practica4_parte1App.swift; sourceTree = "<group>"; };
 		15C857532913920B009CAA50 /* QuizzesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzesListView.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			children = (
 				15C857532913920B009CAA50 /* QuizzesListView.swift */,
 				15C8578A2913B300009CAA50 /* QuizView.swift */,
+				15ACA3CA2915130E00C12AB4 /* AnswerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 			files = (
 				15C857542913920B009CAA50 /* QuizzesListView.swift in Sources */,
 				15C85781291392B5009CAA50 /* QuizItem.swift in Sources */,
+				15ACA3CB2915130E00C12AB4 /* AnswerView.swift in Sources */,
 				15C8578B2913B300009CAA50 /* QuizView.swift in Sources */,
 				15C85780291392B5009CAA50 /* QuizzesModel.swift in Sources */,
 				15C857522913920B009CAA50 /* Practica4_parte1App.swift in Sources */,

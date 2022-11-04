@@ -13,6 +13,7 @@ struct QuizView: View {
     var body: some View {
         VStack{
             HStack{
+                //Imagen de la pregunta
                 AsyncImage(url: quizItem.attachment?.url){ phase in // 1
                     if let image = phase.image { // 2
                         // if the image is valid
@@ -24,12 +25,14 @@ struct QuizView: View {
                         Text("No image available")
                     } else {
                         //appears as placeholder image
-                        Image(systemName: "photo") // 4
+                        Image(systemName: "photo.circle.fill") // 4
                             .resizable()
-                            .aspectRatio(contentMode: .fill)
+                            .aspectRatio(contentMode: .fit)
                     }
-                }.frame(width: 100, height: 60, alignment: .center)
+                }.frame(width: 90, height: 60, alignment: .center)
                     .scaledToFit()
+                    .clipShape (Circle ())
+                    .overlay (Circle ().stroke(lineWidth: 1))
                 VStack{
                     HStack{
                         //Boton de favoritos
@@ -37,7 +40,7 @@ struct QuizView: View {
                             .resizable()
                             .frame(width: 25, height: 25)
                             .scaledToFit()
-                        //Imagen y nombre del autor
+                        //Imagen del autor
                         AsyncImage(url: quizItem.author?.photo?.url){ phase in // 1
                             if let image = phase.image { // 2
                                 // if the image is valid
@@ -49,11 +52,13 @@ struct QuizView: View {
                                 Text("No image available")
                             } else {
                                 //appears as placeholder image
-                                Image(systemName: "photo") // 4
+                                Image(systemName: "photo.circle.fill") // 4
                                     .resizable()
-                                    .aspectRatio(contentMode: .fill)
+                                    .aspectRatio(contentMode: .fit)
                             }
                         }.frame(width: 15, height: 15)
+                        .clipShape (Circle ())
+                        //Nombre del autor
                         Text(quizItem.author?.username ?? "Someone")
                             .font(.system(size: 12, weight: .light))
                     }
