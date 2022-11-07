@@ -19,6 +19,8 @@
 		15C85780291392B5009CAA50 /* QuizzesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C8577D291392B5009CAA50 /* QuizzesModel.swift */; };
 		15C85781291392B5009CAA50 /* QuizItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C8577E291392B5009CAA50 /* QuizItem.swift */; };
 		15C8578B2913B300009CAA50 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C8578A2913B300009CAA50 /* QuizView.swift */; };
+		BC3B6512291935CA0043DDB1 /* ScoresModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3B6511291935CA0043DDB1 /* ScoresModel.swift */; };
+		BC3B65142919361B0043DDB1 /* QuizRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3B65132919361A0043DDB1 /* QuizRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		15C8577D291392B5009CAA50 /* QuizzesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizzesModel.swift; sourceTree = "<group>"; };
 		15C8577E291392B5009CAA50 /* QuizItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizItem.swift; sourceTree = "<group>"; };
 		15C8578A2913B300009CAA50 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		BC3B6511291935CA0043DDB1 /* ScoresModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoresModel.swift; sourceTree = "<group>"; };
+		BC3B65132919361A0043DDB1 /* QuizRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,7 @@
 				15C8577E291392B5009CAA50 /* QuizItem.swift */,
 				15C8577C291392B5009CAA50 /* quizzes.json */,
 				15C8577D291392B5009CAA50 /* QuizzesModel.swift */,
+				BC3B6511291935CA0043DDB1 /* ScoresModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 			children = (
 				15C857532913920B009CAA50 /* QuizzesListView.swift */,
 				15C8578A2913B300009CAA50 /* QuizView.swift */,
+				BC3B65132919361A0043DDB1 /* QuizRowView.swift */,
 				15ACA3CA2915130E00C12AB4 /* AnswerView.swift */,
 			);
 			path = Views;
@@ -297,9 +303,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC3B65142919361B0043DDB1 /* QuizRowView.swift in Sources */,
 				15C857542913920B009CAA50 /* QuizzesListView.swift in Sources */,
 				15C85781291392B5009CAA50 /* QuizItem.swift in Sources */,
 				15ACA3CB2915130E00C12AB4 /* AnswerView.swift in Sources */,
+				BC3B6512291935CA0043DDB1 /* ScoresModel.swift in Sources */,
 				15C8578B2913B300009CAA50 /* QuizView.swift in Sources */,
 				15C85780291392B5009CAA50 /* QuizzesModel.swift in Sources */,
 				15C857522913920B009CAA50 /* Practica4_parte1App.swift in Sources */,
