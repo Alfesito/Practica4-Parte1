@@ -11,11 +11,14 @@ import SwiftUI
 struct Practica4_parte1App: App {
     
     let quizzesModel = QuizzesModel()
+    let scoresModel = ScoresModel()
     
     var body: some Scene {
         WindowGroup {
             QuizzesListView()
                 .environmentObject(quizzesModel)
+                .environmentObject(scoresModel)
+
         }
     }
 }
